@@ -2,6 +2,7 @@ package page_objects;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 
 import java.util.HashMap;
@@ -67,8 +68,14 @@ public class WebCalcHomePage extends BasePage {
     @FindBy(css = "#input")
     WebElement inputAndResult;
 
-    @FindBy (css= "#BtnClear")
+    @FindBy(css = "#BtnClear")
     WebElement clearButton;
+
+    @FindBy(css = "#hist")
+    WebElement historyButton;
+
+    @FindBy(css = "#histframe [data-inp]")
+    List<WebElement> historyListRecords;
 
     public WebCalcHomePage(WebDriver driver) {
         super(driver);
@@ -79,7 +86,7 @@ public class WebCalcHomePage extends BasePage {
     }
 
     public void pressingButtons(List<String> keys) {
-        Map<String, WebElement> elements = new HashMap<String, WebElement>();
+        Map<String, WebElement> elements = new HashMap<String, WebElement>(); //Placing relevant button elements into the HashMap, allows a cleaner code in the test method in a scenario of multiple clicks.
 
         elements.put("1", oneButton);
         elements.put("2", twoButton);
@@ -105,12 +112,25 @@ public class WebCalcHomePage extends BasePage {
         }
     }
 
-    public void clearScreen(){
+    public void clearScreen() {
         click(clearButton);
     }
 
-    public void verify(String value){
+    public void openHistory() {
+        click(historyButton);
+    }
+
+    public void verify(String value) {
+        Actions actions = new Actions(driver);
+        actions.moveToElement(inputAndResult);
+        actions.contextClick();
+
+
         Double.parseDouble(value);
+    }
+
+    public int countHistory() {
+       return historyListRecords.size();
     }
 
 }

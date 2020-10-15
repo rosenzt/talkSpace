@@ -38,6 +38,9 @@ public class WebCalcHomePageTest {
         Assert.assertEquals(5, webCalcHomePage.getResult());
     }
 
+    /**
+     * The following method verifies the result of 10-2 is 8
+     */
     @Test(priority = 1)
     void testSubtraction() {
         webCalcHomePage.clearScreen();
@@ -46,6 +49,9 @@ public class WebCalcHomePageTest {
         Assert.assertEquals(8, webCalcHomePage.getResult());
     }
 
+    /**
+     * The following method verifies the result of (10-2)*2 != 20
+     */
     @Test(priority = 2)
     void testChainProblem() {
         webCalcHomePage.clearScreen();
@@ -54,6 +60,9 @@ public class WebCalcHomePageTest {
         Assert.assertNotEquals(20, webCalcHomePage.getResult());
     }
 
+    /**
+     * The following method verifies the result of sin(30) + 0.5
+     */
     @Test(priority = 3)
     void testSinus() {
         webCalcHomePage.clearScreen();
@@ -62,8 +71,13 @@ public class WebCalcHomePageTest {
         Assert.assertEquals(0.5, webCalcHomePage.getResult());
     }
 
+    /**
+     * The following method verifies the number of actions listed in the history record (in this case 4)
+     */
     @Test(priority = 4)
     void testHistory() {
+        webCalcHomePage.openHistory();
+        Assert.assertEquals(4,webCalcHomePage.countHistory());
 
     }
 
