@@ -5,6 +5,7 @@ import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import page_objects.WebCalcHomePage;
@@ -68,8 +69,7 @@ public class WebCalcHomePageTest {
                 test.log(LogStatus.PASS, "Test passed");
             } else
                 test.log(LogStatus.FAIL, "Test failed");
-        } catch (
-                Exception exception) {
+        } catch (Exception exception) {
             test.log(LogStatus.ERROR, "Following exception has been thrown " + exception);
         }
     }
@@ -89,14 +89,13 @@ public class WebCalcHomePageTest {
                 test.log(LogStatus.PASS, "Test passed");
             } else
                 test.log(LogStatus.FAIL, "Test failed");
-        } catch (
-                Exception exception) {
+        } catch (Exception exception) {
             test.log(LogStatus.ERROR, "Following exception has been thrown " + exception);
         }
     }
 
     /**
-     * The following method verifies the result of sin(30) + 0.5
+     * The following method verifies the result of sin(30) = 0.5
      */
     @Test(priority = 3)
     void testSinus() {
@@ -105,13 +104,12 @@ public class WebCalcHomePageTest {
             List<String> buttons = Arrays.asList("sin", "3", "0", "=");
             webCalcHomePage.pressingButtons(buttons);
 
-            boolean pass = (webCalcHomePage.getLatestResult() != 20);
+            boolean pass = (webCalcHomePage.getLatestResult() == 0.5);
             if (pass) {
                 test.log(LogStatus.PASS, "Test passed");
             } else
                 test.log(LogStatus.FAIL, "Test failed");
-        } catch (
-                Exception exception) {
+        } catch (Exception exception) {
             test.log(LogStatus.ERROR, "Following exception has been thrown " + exception);
         }
     }
@@ -129,13 +127,12 @@ public class WebCalcHomePageTest {
                 test.log(LogStatus.PASS, "Test passed");
             } else
                 test.log(LogStatus.FAIL, "Test failed");
-        } catch (
-                Exception exception) {
+        } catch (Exception exception) {
             test.log(LogStatus.ERROR, "Following exception has been thrown " + exception);
         }
     }
 
-    //@AfterClass
+    @AfterClass
     void tearDown() {
         driver.quit();
     }
