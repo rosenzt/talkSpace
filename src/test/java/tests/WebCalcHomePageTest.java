@@ -1,8 +1,10 @@
 package tests;
 
+import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.ExtentTest;
+import com.relevantcodes.extentreports.LogStatus;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import page_objects.WebCalcHomePage;
@@ -15,12 +17,16 @@ public class WebCalcHomePageTest {
 
     WebDriver driver;
     private WebCalcHomePage webCalcHomePage;
+    static ExtentTest test;
+    static ExtentReports report;
 
     @BeforeClass
     void lunchSuit() {
         System.setProperty("webdriver.chrome.driver", "browserDrivers/chromedriver");
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(10000, TimeUnit.MILLISECONDS);
+        report = new ExtentReports(System.getProperty("user.dir") + "/src/main/resources/Reports/report.html", false);
+        test = report.startTest("WebCalcHomePageTest");
         driver.manage().window().maximize();
         this.driver.get("https://web2.0calc.com/");
 
@@ -32,10 +38,19 @@ public class WebCalcHomePageTest {
      */
     @Test(priority = 0)
     void testAddition() {
-        webCalcHomePage.clearScreen();
-        List<String> buttons = Arrays.asList("2", "+", "3", "=");
-        webCalcHomePage.pressingButtons(buttons);
-        Assert.assertEquals(5, webCalcHomePage.getResult());
+        try {
+            webCalcHomePage.clearScreen();
+            List<String> buttons = Arrays.asList("2", "+", "3", "=");
+            webCalcHomePage.pressingButtons(buttons);
+
+            boolean pass = (webCalcHomePage.getLatestResult() == 5);
+            if (pass) {
+                test.log(LogStatus.PASS, "Test passed");
+            } else
+                test.log(LogStatus.FAIL, "Test failed");
+        } catch (Exception exception) {
+            test.log(LogStatus.ERROR, "Following exception has been thrown " + exception);
+        }
     }
 
     /**
@@ -43,10 +58,20 @@ public class WebCalcHomePageTest {
      */
     @Test(priority = 1)
     void testSubtraction() {
-        webCalcHomePage.clearScreen();
-        List<String> buttons = Arrays.asList("1", "0", "-", "2", "=");
-        webCalcHomePage.pressingButtons(buttons);
-        Assert.assertEquals(8, webCalcHomePage.getResult());
+        try {
+            webCalcHomePage.clearScreen();
+            List<String> buttons = Arrays.asList("1", "0", "-", "2", "=");
+            webCalcHomePage.pressingButtons(buttons);
+
+            boolean pass = (webCalcHomePage.getLatestResult() == 8);
+            if (pass) {
+                test.log(LogStatus.PASS, "Test passed");
+            } else
+                test.log(LogStatus.FAIL, "Test failed");
+        } catch (
+                Exception exception) {
+            test.log(LogStatus.ERROR, "Following exception has been thrown " + exception);
+        }
     }
 
     /**
@@ -54,10 +79,20 @@ public class WebCalcHomePageTest {
      */
     @Test(priority = 2)
     void testChainProblem() {
-        webCalcHomePage.clearScreen();
-        List<String> buttons = Arrays.asList("(", "1", "0", "-", "2", ")", "*", "2", "=");
-        webCalcHomePage.pressingButtons(buttons);
-        Assert.assertNotEquals(20, webCalcHomePage.getResult());
+        try {
+            webCalcHomePage.clearScreen();
+            List<String> buttons = Arrays.asList("(", "1", "0", "-", "2", ")", "*", "2", "=");
+            webCalcHomePage.pressingButtons(buttons);
+
+            boolean pass = (webCalcHomePage.getLatestResult() != 20);
+            if (pass) {
+                test.log(LogStatus.PASS, "Test passed");
+            } else
+                test.log(LogStatus.FAIL, "Test failed");
+        } catch (
+                Exception exception) {
+            test.log(LogStatus.ERROR, "Following exception has been thrown " + exception);
+        }
     }
 
     /**
@@ -65,10 +100,20 @@ public class WebCalcHomePageTest {
      */
     @Test(priority = 3)
     void testSinus() {
-        webCalcHomePage.clearScreen();
-        List<String> buttons = Arrays.asList("sin", "3", "0", "=");
-        webCalcHomePage.pressingButtons(buttons);
-        Assert.assertEquals(0.5, webCalcHomePage.getResult());
+        try {
+            webCalcHomePage.clearScreen();
+            List<String> buttons = Arrays.asList("sin", "3", "0", "=");
+            webCalcHomePage.pressingButtons(buttons);
+
+            boolean pass = (webCalcHomePage.getLatestResult() != 20);
+            if (pass) {
+                test.log(LogStatus.PASS, "Test passed");
+            } else
+                test.log(LogStatus.FAIL, "Test failed");
+        } catch (
+                Exception exception) {
+            test.log(LogStatus.ERROR, "Following exception has been thrown " + exception);
+        }
     }
 
     /**
@@ -76,9 +121,18 @@ public class WebCalcHomePageTest {
      */
     @Test(priority = 4)
     void testHistory() {
-        webCalcHomePage.openHistory();
-        Assert.assertEquals(4,webCalcHomePage.countHistory());
+        try {
+            webCalcHomePage.openHistory();
 
+            boolean pass = (webCalcHomePage.countHistory() == 4);
+            if (pass) {
+                test.log(LogStatus.PASS, "Test passed");
+            } else
+                test.log(LogStatus.FAIL, "Test failed");
+        } catch (
+                Exception exception) {
+            test.log(LogStatus.ERROR, "Following exception has been thrown " + exception);
+        }
     }
 
     //@AfterClass

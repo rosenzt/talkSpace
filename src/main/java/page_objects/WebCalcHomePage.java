@@ -77,17 +77,22 @@ public class WebCalcHomePage extends BasePage {
     @FindBy(css = "#histframe [data-inp]")
     List<WebElement> historyListRecords;
 
+    @FindBy(css= "#histframe [class=r]")
+    List<WebElement> problemsSolutions;
+
     public WebCalcHomePage(WebDriver driver) {
         super(driver);
     }
 
-    public double getResult() {
-        return Double.parseDouble(getText(inputAndResult));
+    public double getLatestResult() {
+        String result = problemsSolutions.get(problemsSolutions.size()).getText();
+        result.
+
     }
 
     public void pressingButtons(List<String> keys) {
-        Map<String, WebElement> elements = new HashMap<String, WebElement>(); //Placing relevant button elements into the HashMap, allows a cleaner code in the test method in a scenario of multiple clicks.
-
+        Map<String, WebElement> elements = new HashMap<String, WebElement>(); //Placing relevant button elements into the HashMap,
+                                                            // allows a cleaner code in the test method in a scenario of multiple clicks.
         elements.put("1", oneButton);
         elements.put("2", twoButton);
         elements.put("3", threeButton);
@@ -118,15 +123,6 @@ public class WebCalcHomePage extends BasePage {
 
     public void openHistory() {
         click(historyButton);
-    }
-
-    public void verify(String value) {
-        Actions actions = new Actions(driver);
-        actions.moveToElement(inputAndResult);
-        actions.contextClick();
-
-
-        Double.parseDouble(value);
     }
 
     public int countHistory() {
