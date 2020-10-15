@@ -40,17 +40,18 @@ public class WebCalcHomePageTest {
     @Test(priority = 0)
     void testAddition() {
         try {
+            test.log(LogStatus.INFO, "Running testAddition method");
             webCalcHomePage.clearScreen();
             List<String> buttons = Arrays.asList("2", "+", "3", "=");
             webCalcHomePage.pressingButtons(buttons);
 
             boolean pass = (webCalcHomePage.getLatestResult() == 5);
             if (pass) {
-                test.log(LogStatus.PASS, "Test passed");
+                test.log(LogStatus.PASS, "testAddition passed");
             } else
-                test.log(LogStatus.FAIL, "Test failed");
+                test.log(LogStatus.FAIL, "testAddition failed");
         } catch (Exception exception) {
-            test.log(LogStatus.ERROR, "Following exception has been thrown " + exception);
+            test.log(LogStatus.ERROR, "testAddition has thrown the following " + exception);
         }
     }
 
@@ -66,11 +67,11 @@ public class WebCalcHomePageTest {
 
             boolean pass = (webCalcHomePage.getLatestResult() == 8);
             if (pass) {
-                test.log(LogStatus.PASS, "Test passed");
+                test.log(LogStatus.PASS, "testSubtraction passed");
             } else
-                test.log(LogStatus.FAIL, "Test failed");
+                test.log(LogStatus.FAIL, "testSubtraction failed");
         } catch (Exception exception) {
-            test.log(LogStatus.ERROR, "Following exception has been thrown " + exception);
+            test.log(LogStatus.ERROR, "testSubtraction has thrown the following " + exception);
         }
     }
 
@@ -86,11 +87,11 @@ public class WebCalcHomePageTest {
 
             boolean pass = (webCalcHomePage.getLatestResult() != 20);
             if (pass) {
-                test.log(LogStatus.PASS, "Test passed");
+                test.log(LogStatus.PASS, "testChainProblem passed");
             } else
-                test.log(LogStatus.FAIL, "Test failed");
+                test.log(LogStatus.FAIL, "testChainProblem failed");
         } catch (Exception exception) {
-            test.log(LogStatus.ERROR, "Following exception has been thrown " + exception);
+            test.log(LogStatus.ERROR, "testChainProblem has thrown the following " + exception);
         }
     }
 
@@ -106,11 +107,11 @@ public class WebCalcHomePageTest {
 
             boolean pass = (webCalcHomePage.getLatestResult() == 0.5);
             if (pass) {
-                test.log(LogStatus.PASS, "Test passed");
+                test.log(LogStatus.PASS, "testSinus passed");
             } else
-                test.log(LogStatus.FAIL, "Test failed");
+                test.log(LogStatus.FAIL, "testSinus failed");
         } catch (Exception exception) {
-            test.log(LogStatus.ERROR, "Following exception has been thrown " + exception);
+            test.log(LogStatus.ERROR, "testSinus has thrown the following " + exception);
         }
     }
 
@@ -124,16 +125,18 @@ public class WebCalcHomePageTest {
 
             boolean pass = (webCalcHomePage.countHistory() == 4);
             if (pass) {
-                test.log(LogStatus.PASS, "Test passed");
+                test.log(LogStatus.PASS, "testHistory passed");
             } else
-                test.log(LogStatus.FAIL, "Test failed");
+                test.log(LogStatus.FAIL, "testHistory failed");
         } catch (Exception exception) {
-            test.log(LogStatus.ERROR, "Following exception has been thrown " + exception);
+            test.log(LogStatus.ERROR, "testHistory has thrown the following " + exception);
         }
     }
 
     @AfterClass
     void tearDown() {
+        report.endTest(test);
+        report.flush();
         driver.quit();
     }
 }

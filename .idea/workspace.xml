@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ab376e14-3be1-47fd-8a3c-2dcea4c961d6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/page_objects/WebCalcHomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/page_objects/WebCalcHomePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/WebCalcHomePageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/WebCalcHomePageTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/page_objects/WebCalcHomePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/page_objects/WebCalcHomePage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/tests/WebCalcHomePageTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/tests/WebCalcHomePageTest.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -22,12 +18,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/tests/WebCalcHomePageTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="34" lean-forward="true" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
+            <state relative-caret-position="360">
+              <caret line="131" column="50" selection-start-line="131" selection-start-column="50" selection-end-line="131" selection-end-column="50" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#4656#4657#0" expanded="true" />
-                <element signature="e#4685#4686#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -57,8 +51,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="35" column="21" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="21" />
+            <state relative-caret-position="585">
+              <caret line="41" column="21" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -74,6 +68,7 @@
         <option value="$PROJECT_DIR$/src/main/java/page_objects/BasePage.java" />
         <option value="$PROJECT_DIR$/src/main/java/page_objects/WebCalcHomePage.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/test/java/tests/WebCalcHomePageTest2.java" />
         <option value="$PROJECT_DIR$/src/test/java/tests/WebCalcHomePageTest.java" />
       </list>
     </option>
@@ -113,11 +108,6 @@
             <path>
               <item name="talkSpace" type="b2602c69:ProjectViewProjectNode" />
               <item name="talkSpace" type="462c0819:PsiDirectoryNode" />
-              <item name="browserDrivers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="talkSpace" type="b2602c69:ProjectViewProjectNode" />
-              <item name="talkSpace" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -136,49 +126,16 @@
             <path>
               <item name="talkSpace" type="b2602c69:ProjectViewProjectNode" />
               <item name="talkSpace" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="Reports" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="talkSpace" type="b2602c69:ProjectViewProjectNode" />
               <item name="talkSpace" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-              <item name="classes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="talkSpace" type="b2602c69:ProjectViewProjectNode" />
-              <item name="talkSpace" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-              <item name="classes" type="462c0819:PsiDirectoryNode" />
-              <item name="page_objects" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="talkSpace" type="b2602c69:ProjectViewProjectNode" />
-              <item name="talkSpace" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-              <item name="generated-sources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="talkSpace" type="b2602c69:ProjectViewProjectNode" />
-              <item name="talkSpace" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-              <item name="generated-test-sources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="talkSpace" type="b2602c69:ProjectViewProjectNode" />
-              <item name="talkSpace" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-              <item name="test-classes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="talkSpace" type="b2602c69:ProjectViewProjectNode" />
-              <item name="talkSpace" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-              <item name="test-classes" type="462c0819:PsiDirectoryNode" />
-              <item name="tests" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="talkSpace" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -187,7 +144,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1602759288972" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1602761602410" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -272,9 +229,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="WebCalcHomePageTest - 2020.10.15 at 12h 49m 04s.xml">
-      <configuration name="WebCalcHomePageTest" configurationId="TestNG" />
-    </history-entry>
     <history-entry file="WebCalcHomePageTest - 2020.10.15 at 13h 01m 07s.xml">
       <configuration name="WebCalcHomePageTest" configurationId="TestNG" />
     </history-entry>
@@ -302,12 +256,15 @@
     <history-entry file="WebCalcHomePageTest - 2020.10.15 at 13h 55m 27s.xml">
       <configuration name="WebCalcHomePageTest" configurationId="TestNG" />
     </history-entry>
+    <history-entry file="WebCalcHomePageTest - 2020.10.15 at 14h 26m 52s.xml">
+      <configuration name="WebCalcHomePageTest" configurationId="TestNG" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="38" y="23" width="1242" height="777" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19416666" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.285" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -316,7 +273,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Messages" weight="0.32779455" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32908705" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32779455" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.46827793" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -358,19 +315,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="35" column="21" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="21" />
+        <state relative-caret-position="585">
+          <caret line="41" column="21" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/tests/WebCalcHomePageTest.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/tests/WebCalcHomePageTest2.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="34" lean-forward="true" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
+        <state relative-caret-position="375">
+          <caret line="32" column="69" selection-start-line="32" selection-start-column="69" selection-end-line="32" selection-end-column="69" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#4656#4657#0" expanded="true" />
-            <element signature="e#4685#4686#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/Reports/report.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/tests/WebCalcHomePageTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="131" column="50" selection-start-line="131" selection-start-column="50" selection-end-line="131" selection-end-column="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
